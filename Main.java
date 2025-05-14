@@ -16,9 +16,38 @@ class BankCustomer {
     }
 }
 
+class TransactionHistory  {
+    int id;
+    String sname;
+    String rname;
+    String date;
+    String status;
+
+    TransactionHistory(int ID, String s , String  r,String dob,String stat) 
+    {
+        id = ID;
+        sname = s;
+        rname = r;
+        date = dob;
+        status = stat;
+    }
+
+
+    public void display() {
+        System.out.println("Transaction id: " + id);
+        System.out.println("Sender name: " + sname);
+        System.out.println("Receiver's name: " + rname);
+        System.out.println("Transaction status: " + status);
+        System.out.println("Transaction Date: " + date);
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         BankCustomer c = new BankCustomer("Susana", 147213, 23);
         c.display();
+    
+        TransactionHistory t = new TransactionHistory(111, "nikhil", "ranjith", "04-05-2025", "successful");
+        t.display();
     }
 }
